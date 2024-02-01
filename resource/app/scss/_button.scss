@@ -1,0 +1,71 @@
+/*! ===== button rounded style =====*/
+.btn-rounded{
+    display: inline-block;
+    padding: 12px 20px;
+    min-width: 120px;
+    text-align: center;
+    background-color: $theme-color;
+    color: $white ;
+    @include font($roboto,400,16px);
+    border-radius: 5px;
+    border: 2px solid $theme-color;
+    @include transition(all .2s ease-in-out);
+    &.btn-o{
+        background-color: $white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+}
+.btn-rounded:hover,.btn-rounded:focus{
+    background-color: darken($theme-color,15%);
+    border-color: darken($theme-color,15%);
+    outline: none;
+    color: $white;
+}
+/*! ===== button square style =====*/
+.btn-square{ 
+    display: inline-block;
+    padding: 12px 20px;
+    min-width: 120px;
+    text-align: center;
+    background-color: $theme-color;
+    color: $white ;
+    @include font($roboto,400,16px);
+    border-radius: 0;
+    border: 2px solid $theme-color;
+    @include transition(all .2s ease-in-out);
+    &.btn-o{
+        background-color: $white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+}
+.btn-square:hover,.btn-square:focus{
+    background-color: darken($theme-color,15%);
+    border-color: darken($theme-color,15%);
+    outline: none;
+    color: $white;
+}
+.btn-circle{/*===== button circle style =====*/
+    display: inline-block;
+    padding: 12px 20px;
+    min-width: 120px;
+    text-align: center;
+    background-color: $theme-color;
+    color: $white ;
+    @include font($roboto,400,16px);
+    border-radius: 25px;
+    border: 2px solid $theme-color;
+    @include transition(all .2s ease-in-out);
+    &.btn-o{
+        background-color: $white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+}
+.btn-circle:hover,.btn-circle:focus{
+    background-color: darken($theme-color,15%);
+    border-color: darken($theme-color,15%);
+    outline: none;
+    color: $white;
+}

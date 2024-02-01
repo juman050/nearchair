@@ -1,0 +1,145 @@
+
+
+.checkout-top-bar{
+	 background: #f7f7f7;
+    width: 100%;
+    padding: 15px 0;
+	p{@include font($roboto,400,14px);
+		display: inline-block;
+		margin: 0;
+	}
+	span{
+		float: right;
+		a{
+			color: #ff546f;
+			@include font($roboto,400,14px);
+		}
+	}
+}
+.check-out-page{
+	padding: 50px 0;
+	.single-cart-item-row{
+		&:last-child{
+			border-bottom: 1px solid #f7f7f7;
+		}
+	}
+	.single-cart-item{
+
+	}
+	.total{
+		@include font($roboto,400,14px);		
+	    margin: 0;
+	    @include media-max(500px){
+				font-size: 16px;
+			}
+	    	span{
+	    		@include font($roboto,300,14px);
+	    	}
+	    }
+	.total-cost-wrapper{
+		padding: 10px 0;
+		border-bottom: 1px solid #f7f7f7;
+	    display: inline-block;
+	    width: 100%;
+	    .form-control{
+	    	outline: 0;
+	    	&:focus{
+	    		outline: 0;
+	    		border-color: #ff546f;
+			    outline: 0;
+			    box-shadow:none;
+	    	}
+	    }
+	    
+		.subtotal-text{
+			margin: 0;
+			@include font($roboto,400,18px);
+			@include media-max(500px){
+				font-size: 16px;
+			}
+			@include media-max(375px){
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+		.vouvher-text{
+			@include font($roboto,400,16px);
+			color: #ff546f;
+			@include media-max(500px){
+				font-size: 12px;
+				margin-top: 10px;
+			}
+		}
+		.subtotal-amount{
+			@include font($roboto,400,18px);
+			@include media-max(500px){
+				font-size: 16px;
+			}
+			@include media-max(375px){
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+	}
+	.quantity{
+		@include media-max(500px){
+			    display: flex;
+		}
+		.qt-minus,.qt-plus,{
+			background: #fcfcfc;
+		    border: none;
+		    font-size:14px;
+		    font-weight: 500;
+		    height: 100%;
+		    padding: 0 10px;
+		    -webkit-transition: background .2s linear;
+		    -moz-transition: background .2s linear;
+		    -ms-transition: background .2s linear;
+		    -o-transition: background .2s linear;
+		    transition: background .2s linear;
+		    &:hover{
+		    	background-color: #ff546f;
+		    	color: #fff;
+		    }
+		}
+		.qt-minus{
+
+		}
+		.qt{
+			font-size:14px;
+		    font-weight: 400;
+		    height: 100%;
+		    padding: 0 10px;
+		    margin-top: 2px;
+		    @include media-max(375px){
+				font-size: 12px;
+				padding: 0 5px;
+			}
+		}
+		.qt-plus{}
+	}
+	.services-name{
+		    margin-left: 5px;
+		.name-item{
+			@include font($roboto,400,16px);
+			@include media-max(500px){
+				font-size: 14px;
+			}			
+			@include media-max(375px){
+				font-size: 12px;
+			}
+		}		
+	}
+	.service-cost{
+		text-align: right;
+			.price{
+				@include font($roboto,400,16px);
+				@include media-max(500px){
+					font-size: 14px;
+				}
+				@include media-max(375px){
+					font-size: 12px;
+				}
+			}
+		}
+}

@@ -1,0 +1,13 @@
+/**
+ * ----------------------------------------------
+ * Font face
+ * 
+ */
+$roboto: "roboto", sans-serif;
+// Roboto
+@include font-face($roboto, '../fonts/roboto-thin', 100);
+@include font-face($roboto, '../fonts/roboto-light', 300);
+@include font-face($roboto, '../fonts/roboto-regular', 400);
+@include font-face($roboto, '../fonts/roboto-medium', 500);
+@include font-face($roboto, '../fonts/roboto-bold', 700);
+@include font-face($roboto, '../fonts/roboto-black', 900);

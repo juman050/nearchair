@@ -1,0 +1,282 @@
+.ripplelink{
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+}
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+	display: block; position: absolute;
+	_background: hsl(180, 40%, 80%);
+	background: #e4e4e4;
+	border-radius: 100%;
+	transform: scale(0);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+/*search overlay*/
+.content-overlay{
+    background: #f2f2f2;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	min-height: 100%;
+	-ms-touch-action: none;
+	touch-action: none;
+	z-index: 1000;
+	pointer-events: none;
+}
+.content-overlay.content-overlay-transition {
+	opacity: 0;
+	transform: translate3d(0,0,0);
+}
+.content-overlay.content-overlay-show {
+    background: #fff;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	pointer-events: auto;
+}
+.content-overlay .content {
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius: 0;
+	background-color: #eee;
+}
+
+.new-autocomplete-modal {
+    _margin-top: 10px;
+    background: #fff;
+}
+.autocomplete-header {
+	background-color: #f2f2f2;
+	height: 59px;
+	padding-top: 10px;
+}
+.custom-search_field input {
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	font-weight: 400;
+	padding: 8px 35px 8px 10px!important;
+	height: 40px;
+	border: 1px solid #e1e1e1;
+	border-radius: 6px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	outline: 0;
+	margin-left: 5px;
+}
+i.icon-right.fa.fa-remove.clear-icon {
+    color: #ccc;
+    font-size: 17px;
+    font-weight: 100;
+    display:none;
+}
+.custom-search_field .icon-right {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.custom-search_field .search-icon {
+	color: #ff8272;
+	font-size: 26px;
+	font-size: 1.625rem;
+}
+.autocomplete-input {
+	height: 40px;
+	width: 82.97872%;
+	float: left;
+	margin-right: 2.12766%;
+}
+.autocomplete-input .input-group{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.autocomplete-close {
+	width: 14.89362%;
+	float: right;
+	margin-right: 0;
+	text-decoration: none;
+	line-height: 38px;
+	text-align: center;
+	color: #ff8272;
+}
+.autocomplete-list {
+	width: 100%;
+	overflow: hidden;
+	top: 59px;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0 1px 6px 0 rgba(0,0,0,.1);
+	background: #fff;
+}
+
+.location-manager .autocomplete-item-container, .search-autocomplete-modal .autocomplete-item-container {
+	position: static;
+	box-shadow: none;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border-radius: 0;
+	display: block!important;
+	-webkit-overflow-scrolling: touch;
+}
+.autocomplete-item-container {
+	padding: 0;
+	text-align: left;
+}
+.autocomplete-item a {
+	padding: 15px 30px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #ddd;
+	font-size:14px;
+}
+
+.nc-autocomplete__list-results__list-item__tag-type {
+	display: inline-block;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0 5px;
+	min-width: 50px;
+	vertical-align: middle;
+	margin-right: 5px;
+	box-sizing: border-box;
+	font-size: 11px;
+	font-size: .6875rem;
+}
+.nc-autocomplete__list-results__list-item-name{
+    font-size: 15px;
+    line-height:22px;
+}
+
+.nc-autocomplete__list-results__list-item__tag-type--salon {
+	background: #4caf50;
+    margin-right: 3px;
+    border: 1px solid #4caf50;
+    color: #fff;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+.nc-autocomplete__list-results__list-item__tag-type--service {
+    background: #00bfa5;
+    margin-right: 3px;
+    border: 1px solid #00bfa5;
+    color: #fff;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+/*business details page custom codes*/
+
+.load-more{
+    font-size: 16px;
+    max-width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px;
+    color: #444;
+    cursor:pointer;
+}
+/* Rating Star Widgets Style */
+.rating-stars {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.br-theme-fontawesome-stars .br-widget {
+  height: 28px;
+  white-space: nowrap;
+}
+.br-theme-fontawesome-stars .br-widget a {
+  font: normal normal normal 25px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  margin-right: 3px;
+}
+.br-theme-fontawesome-stars .br-widget a:after {
+  content: '\f005';
+  color: #d2d2d2;
+}
+.br-theme-fontawesome-stars .br-widget a.br-active:after {
+  color: #ffa500;;
+}
+.br-theme-fontawesome-stars .br-widget a.br-selected:after {
+  color: #ffa500;;
+}
+.br-theme-fontawesome-stars .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-fontawesome-stars .br-readonly a {
+  cursor: default;
+}
+@media print {
+  .br-theme-fontawesome-stars .br-widget a:after {
+    content: '\f006';
+    color: black;
+  }
+  .br-theme-fontawesome-stars .br-widget a.br-active:after,
+  .br-theme-fontawesome-stars .br-widget a.br-selected:after {
+    content: '\f005';
+    color: black;
+  }
+}
+
+textarea#review_text {
+    border: none;
+    width: 100%;
+    outline: 0;
+    box-shadow: none;
+    margin-top:7px;
+}
+#submit_review{
+    margin-top:5px;
+    text-transform: uppercase;
+}
+
+
+/*  Upload Button Style  */
+
+ .emon_dsgn_upload {
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin-bottom: 20px;
+}
+ .emon_dsgn_upload .file-upload {
+    border-radius: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #ffffff;
+    background-size: 100% 200%;
+    transition: all 1s;
+    color: #575757;
+    font-size: 22px;
+    border: 1px solid #949292;
+    padding: 12px 30px;
+}
+ .emon_dsgn_upload .file-upload input[type='file'] {
+     font-size: 22px;
+     padding: 12px 30px;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 opacity: 0;
+	 cursor: pointer;
+}

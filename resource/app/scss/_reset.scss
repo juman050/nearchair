@@ -1,0 +1,78 @@
+/**
+ * ----------------------------------------------
+ * SIMPLE RESET
+ * ----------------------------------------------
+ */
+*{
+    @include font($roboto,400,16px);
+    @include box-sizing(border-box);
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $white;
+    @include scrollbars(.3em,  lighten(#ff546f,20%));
+}
+
+/**
+ * ----------------------------------------------
+ * CUSTOM CLASS
+ * ----------------------------------------------
+ */
+ a{
+    text-decoration: none !important;
+ }
+.page-wrapper{
+    position: relative;
+}
+.fix-container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    @include media-max(500px){
+        padding: 0 3%;
+    }
+    @include media-min-max(500px,800px){
+        padding: 0 3%;
+    }
+}
+.white-space{
+    height: 130px;
+    width: 100%;
+    @include media-min(1370px){
+        height: 160px;
+    }
+    @include media-max(500px){
+        height: 80px;
+    }
+    @include media-max(400px) {
+        height: 50px;
+    }
+}
+.fix{
+    margin: 0px;
+    padding: 0px;
+}
+.p-none{
+    padding: 0px;
+}
+.m-none{
+    margin: 0px;
+}
+.clear{
+    clear: both;
+}
+/*! ===== input field style =====*/
+.input-field{ 
+    border: 1px solid $p-text-color;
+    padding: 12px;
+    border-radius: 5px;
+    @include font($roboto,400,14px);
+    &:hover,&:focus{
+        &::placeholder { 
+            color: $p-text-color;
+            opacity: 1;
+            @include transition(all .2s ease-in-out);
+        }
+    }
+}
