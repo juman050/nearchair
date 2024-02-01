@@ -3,7 +3,7 @@
 require APPPATH . '/libraries/BaseController.php';
 
 /**
- * Class : NearchairArea (Area Controller)
+ * Class : NearchairArea (This is Area Controller)
  * NearchairArea Class to control all user related operations.
  * @author : Emon
  * @version : 1.0
